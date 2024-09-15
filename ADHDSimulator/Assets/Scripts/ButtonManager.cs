@@ -15,19 +15,19 @@ public class ButtonManager : MonoBehaviour
         //This means button manager will functions like RandomeOutComeWork1, RandomeOutComeWork2, etc.
         //All of these functions work the same, but need different panels for them. I'll probably have a basic skeleton of the game by the time you see this
         currentState.RandomResult();
-        currentState.ShowOutCome(currentState.RandomResult(), currentState.wakeUpGreat, currentState.wakeUpNormal,currentState.wakeUpFail);
+        currentState.ShowOutCome(RollEvent.result, currentState.wakeUpGreat, currentState.wakeUpNormal,currentState.wakeUpFail);
     }
 
     public void RandomOutcomeFood()
     {
         currentState.RandomResult();
-        currentState.ShowOutCome(currentState.RandomResult(), currentState.foodGreat, currentState.foodNormal, currentState.foodFail);
+        currentState.ShowOutCome(RollEvent.result, currentState.foodGreat, currentState.foodNormal, currentState.foodFail);
     }
 
     public void RandomOutcomeWork()
     {
         currentState.RandomResult();
-        currentState.ShowOutCome(currentState.RandomResult(), currentState.workGreat, currentState.workNormal, currentState.workFail);
+        currentState.ShowOutCome(RollEvent.result, currentState.workGreat, currentState.workNormal, currentState.workFail);
     }
 
     public void AdvanceGameState()

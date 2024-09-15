@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Brain Dice Scene.unity
+    guid: 38635220609714b419fe5c709a5cd2bf
+  - enabled: 1
+    path: Assets/Scenes/ADHDSimSkeleton.unity
+    guid: 8e68b6d0d1028034593d0008ba51d3d1
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

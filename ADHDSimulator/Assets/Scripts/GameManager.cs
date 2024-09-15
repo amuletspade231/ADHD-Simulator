@@ -83,21 +83,21 @@ public class GameManager : MonoBehaviour
     public void ShowOutCome(int result, GameObject GreatSuccess, GameObject NormalSuccess, GameObject Failure)
     {
         //Show OutCome display to our player the result of the option, and then shows the continue button afterwards.
-        if (result >= 5)
+        if (result == 2)
         {
             GreatSuccess.SetActive(true);
             NormalSuccess.SetActive(false);
             Failure.SetActive(false);
         }
 
-        if(result<=4 && result >= 3)
+        if(result == 1)
         {
             GreatSuccess.SetActive(false);
             NormalSuccess.SetActive(true);
             Failure.SetActive(false);
         }
 
-        if (result <= 2)
+        if (result == 0)
         {
             GreatSuccess.SetActive(false);
             NormalSuccess.SetActive(false);
