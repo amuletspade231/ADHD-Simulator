@@ -9,12 +9,15 @@ public class SceneLoader : MonoBehaviour
 
     public float transitionTime = 1f;
 
+    public AudioSource musicPlayer;
+
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) || RollEvent.rollDone)
         {
             LoadNextScene();
+            DontDestroyOnLoad(musicPlayer);
         }
     }
 

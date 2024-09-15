@@ -58,5 +58,10 @@ public class ButtonManager : MonoBehaviour
     {
         currentState.gameState = 0;
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
  
 }
