@@ -20,6 +20,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadNextScene()
     {
+        // switch between dice scene and game scene
         int nextScene = 0;
         if (SceneManager.GetActiveScene().buildIndex == 0 )
         {
@@ -32,8 +33,10 @@ public class SceneLoader : MonoBehaviour
     {
         transition.SetTrigger("Start");
 
+        // reset transition flag
         RollEvent.rollDone = false;
 
+        // wait for fade animation before switching scenes
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(sceneIndex);

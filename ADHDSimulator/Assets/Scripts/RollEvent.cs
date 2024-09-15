@@ -7,8 +7,10 @@ public class RollEvent : MonoBehaviour
 {
     public TextMeshProUGUI text;
 
+    // dice result can be preserved and looked at over different scripts and scenes
     public static int result;
 
+    // flag for when the dice roll is done and it is time to transition to the next scene
     public static bool rollDone = false;
 
     DiceRoll diceRoll;
@@ -30,6 +32,7 @@ public class RollEvent : MonoBehaviour
     {
         text.text = diceRoll.Roll().ToString();
 
+        // determine results
         if (diceRoll.dice.rollValue == 20)
         {
             result = 2; // crit success

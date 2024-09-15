@@ -29,6 +29,7 @@ public class DiceRoll
         modifiers = new List<int>();
     }
 
+    // add possibility of modifiers
     public void AddModifier(int modifier)
     {
         modifiers.Add(modifier);
