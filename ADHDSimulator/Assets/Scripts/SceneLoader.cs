@@ -21,16 +21,35 @@ public class SceneLoader : MonoBehaviour
     public void LoadNextScene()
     {
         // switch between dice scene and game scene
-        int nextScene = 0;
-        if (SceneManager.GetActiveScene().buildIndex == 0 )
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (nextScene >= 5)
         {
-            nextScene = 1;
+            nextScene = 0;
         }
+        /*        if (SceneManager.GetActiveScene().buildIndex == 0 )
+                {
+                    nextScene = 1;
+                }
+                else if (SceneManager.GetActiveScene().buildIndex == 1)
+                {
+                    nextScene = 2;
+                }
+                else if (SceneManager.GetActiveScene().buildIndex == 2)
+                {
+                    nextScene = 1;
+                }*/
         StartCoroutine(LoadScene(nextScene));
     }
 
     IEnumerator LoadScene(int sceneIndex)
     {
+        if (RollEvent.rollDone)
+        {
+            // wait for roll animation before switching scenes
+            yield return new WaitForSeconds(transitionTime);
+        }
+
         transition.SetTrigger("Start");
 
         // reset transition flag

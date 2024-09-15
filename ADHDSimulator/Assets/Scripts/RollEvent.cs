@@ -37,6 +37,10 @@ public class RollEvent : MonoBehaviour
         {
             result = 2; // crit success
         }
+        if (diceRoll.dice.rollValue == 1)
+        {
+            result = 3; // crit fail
+        }
         else if (diceRoll.dice.rollValue < 10)
         {
             result = 0; // fail
